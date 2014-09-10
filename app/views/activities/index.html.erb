@@ -1,0 +1,28 @@
+<%- model_class = Activity -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:desc) %></th>
+      <th><%= model_class.human_attribute_name(:value) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @activities.each do |activity| %>
+      <tr>
+        <td><%= activity.id %></td>
+        <td><%= activity.desc %></td>
+        <td><%= activity.value %></td>
+        <td><%=l activity.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_activity_path,
+            :class => 'btn btn-primary' %>

@@ -36,9 +36,11 @@ gem 'rails-html-sanitizer', '~> 1.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'sucker_punch', '~> 1.0'
-gem 'unicorn'
+gem 'figaro'
+gem 'sidekiq'
 gem 'rails_12factor', group: :production
+gem 'twitter-bootstrap-rails'
+gem 'unicorn'
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
