@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0.beta1'
@@ -37,6 +38,7 @@ gem 'rails-html-sanitizer', '~> 1.0'
 
 gem 'sucker_punch', '~> 1.0'
 gem 'unicorn'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
